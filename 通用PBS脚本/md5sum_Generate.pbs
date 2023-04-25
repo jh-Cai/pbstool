@@ -1,0 +1,33 @@
+#!/bin/sh
+# Bioinformatics Laboratory of South China Agricultural University
+#PBS -N md5sum_Generate
+#PBS -q cu
+#PBS -l nodes=1:ppn=2
+#PBS -l walltime=10000:00:00
+#PBS -o md5sum_Generate_info.log
+#PBS -e md5sum_Generate_error.log
+#PBS -V
+#PBS -S /bin/bash
+cat $PBS_NODEFILE > /tmp/nodefile.$$
+echo "========================================-"
+echo "[作业详情] "
+echo '作业标识: '$PBS_JOBID - $PBS_JOBNAME
+echo '作业队列: '$PBS_QUEUE
+echo 'Conda 环境： Undefined' 
+echo "作业命令: find . -type f -print0 | xargs -0 md5sum >> md5.txt "
+echo '开始时间: ';date
+echo "========================================-"
+echo "[任务开始时间] "
+date
+echo "========================================-"
+echo "[ 工作目录 ] "
+cd $PBS_O_WORKDIR;pwd
+echo "========================================-"
+
+find . -type f -print0 | xargs -0 md5sum >> md5.txt
+echo "========================================-"
+echo "[任务结束时间] "
+date
+echo "========================================-"
+rm -rf /tmp/nodefile.$$
+rm -rf /tmp/nodes.$$

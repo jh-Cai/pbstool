@@ -1,0 +1,8 @@
+gunzip -c MOCK-1_L1_7031.R1.clean.fastq.gz > MOCK-1_L1_7031.R1.clean.fastq
+gunzip -c MOCK-1_L1_7031.R2.clean.fastq.gz > MOCK-1_L1_7031.R2.clean.fastq
+gunzip -c MOCK-2_L1_7045.R1.clean.fastq.gz > MOCK-2_L1_7045.R1.clean.fastq
+gunzip -c MOCK-2_L1_7045.R2.clean.fastq.gz > MOCK-2_L1_7045.R2.clean.fastq
+gunzip -c SCMV-1_L1_7029.R1.clean.fastq.gz > SCMV-1_L1_7029.R1.clean.fastq
+gunzip -c SCMV-1_L1_7029.R2.clean.fastq.gz > SCMV-1_L1_7029.R2.clean.fastq
+gunzip -c SCMV-2_L1_7030.R1.clean.fastq.gz > SCMV-2_L1_7030.R1.clean.fastq
+gunzip -c SCMV-2_L1_7030.R2.clean.fastq.gz > SCMV-2_L1_7030.R2.clean.fastq
