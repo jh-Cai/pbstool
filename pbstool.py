@@ -33,7 +33,6 @@ arg.add_argument("--env",
 
 arg.add_argument("--queue",
                  default='cu',
-                 choices=['cu', 'newcu','fat'],
                  help="Target computing cluster")
 
 arg.add_argument("--node",
